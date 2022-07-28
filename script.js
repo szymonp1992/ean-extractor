@@ -10,13 +10,10 @@ inputField.addEventListener("input", (e) => {
 
   const numbers = [];
 
-  let withoutOne = "";
-
   for (let i = 0; i < czechContentwords.length; i++) {
     // Usuwanie -1 z końcówki EAN-u
     if (czechContentwords[i].includes("-1")) {
-      withoutOne = czechContentwords[i].replace("-1", "");
-      numbers.push(withoutOne);
+      numbers.push(czechContentwords[i]);
     }
     if (czechContentwords[i] > 11111) {
       numbers.push(czechContentwords[i]);
